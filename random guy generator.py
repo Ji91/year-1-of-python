@@ -1,11 +1,14 @@
 import random
 
-names = []
+keep_running = True
+word_list = []
+while keep_running == True:
+    user_input = input("enter a name or type 0 to stop: ")
+    if user_input == "0":
+        keep_running = False
+    else:
+        word_list.append(user_input)
 
-for _ in range(1, 10):
-    names.append(input("Enter a name: ")
-print("All names: ", names)
+name_picked = random.choice(word_list)
 
-idx = random.radint(0, len(names))
-print("Picked name: ", names[idx])
-
+print(name_picked)
